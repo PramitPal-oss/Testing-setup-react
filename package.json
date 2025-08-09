@@ -6,10 +6,12 @@
   "author": "Pramit Pal",
   "type": "module",
   "scripts": {
-    "start": "parcel public/index.html",
+    "dev": "parcel public/index.html --open --no-cache",
+    "start": "parcel public/index.html --no-cache",
     "build": "parcel build public/index.html",
-    "dev": "parcel public/index.html --open",
     "clean": "rm -rf dist .parcel-cache",
+    "rebuild": "npm run clean && npm run dev",
+    "postinstall": "npm run clean",
     "test": "jest"
   },
   "devDependencies": {
@@ -35,7 +37,15 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@mantine/core": "^8.2.2",
+    "@mantine/form": "^8.2.2",
+    "@mantine/hooks": "^8.2.2",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tabler/icons-react": "^3.34.1",
+    "@testing-library/user-event": "^14.6.1",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.5.2",
+    "react-redux": "^9.2.0"
   }
 }
